@@ -70,3 +70,37 @@ h3 {
 a {
     color: blueviolet;
 }
+/* table sort styles from http://tristen.ca/tablesort/demo/ */
+#bookth[role=columnheader]:not(.no-sort) {
+	cursor: pointer;
+}
+
+#bookth[role=columnheader]:not(.no-sort):after {
+	content: '';
+	float: right;
+	margin-top: 7px;
+	border-width: 0 4px 4px;
+	border-style: solid;
+	border-color: peru transparent;
+	visibility: hidden;
+	opacity: 0;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+#bookth[aria-sort=ascending]:not(.no-sort):after {
+	border-bottom: none;
+	border-width: 4px 4px 0;
+}
+
+#bookth[aria-sort]:not(.no-sort):after {
+	visibility: visible;
+	opacity: 0.4;
+}
+
+#bookth[role=columnheader]:not(.no-sort):hover:after {
+	visibility: visible;
+	opacity: 1;
+}

@@ -11,7 +11,7 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     
   
 </head>
@@ -25,23 +25,24 @@
     <!--Navabr-->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/witchhat.png" target="blank">
-          <img src="../public/img/witchhat.png" height="30" alt="">
+        <a class="navbar-brand" href="img/witchhat.png" target="blank">
+          <img src="img/witchhat.png" height="30" alt="">
         </a>
-        <a class="navbar-brand" href="../public/index.html" id="MadisonUni">Madison University for Witches</a>
+        <!-- Image source: https://www.pngitem.com/middle/hbhTTmb_witch-hat-clipart-hd-png-download/ -->
+        <a class="navbar-brand" href="index.html" id="MadisonUni">Madison University for Witches</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="../public/index.html" id="links">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.html" id="links">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active" >
-              <a class="nav-link" href="../public/Student.html" id="links">Students</a>
+              <a class="nav-link" href="Student.html" id="links">Students</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="../public/Books.html" id="links">Books</a>
+              <a class="nav-link" href="Books.html" id="links">Books</a>
             </li>
           </ul>
         </div>
@@ -75,21 +76,22 @@
       </form>
       <br>
       <!--Table-->
-      <table class="table table-sm">
+      <table id="witchBookTable" class="table table-sm">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Title</th>
-            <th scope="col">Author(s)</th>
-            <th scope="col">Year Published</th>
-            <th scope="col">Publisher</th>
-            <th scope="col">Page Count</th>
-            <th scope="col">MSRP</th>
+            <th id="bookth" scope="col">Image</th>
+            <th id="bookth" scope="col">Title</th>
+            <th id="bookth" scope="col">Author(s)</th>
+            <th id="bookth" scope="col">Year Published</th>
+            <th id="bookth" scope="col">Publisher</th>
+            <th id="bookth" scope="col">Page Count</th>
+            <th id="bookth" scope="col">MSRP</th>
           </tr>
         </thead class="thead-dark">
           <tr>
-            <td><a href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/witchcraft.jpg" target="blank">
-              <img src="../public/img/witchcraft.jpg" height="50" alt="https://www.shutterstock.com/image-vector/witchcraft-witch-hand-magic-crystal-flowers-1055451266"></a></td>
+            <td><a href="img/witchcraft.jpg" target="blank">
+              <img src="img/witchcraft.jpg" height="50" alt="https://www.shutterstock.com/image-vector/witchcraft-witch-hand-magic-crystal-flowers-1055451266"></a></td>
+            <!--image source: https://www.shutterstock.com/image-vector/witchcraft-witch-hand-magic-crystal-flowers-1055451266 -->
             <td>Witch Craft in the 21st Century</td>
             <td>Madison Godfrey</td>
             <td>2005</td>
@@ -98,8 +100,9 @@
             <td>$200</td>
           </tr>
           <tr>
-            <td><a href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/pumpkin.jpg" target="blank">
-              <img src="../public/img/pumpkin.jpg" height="50" alt="https://www.walpaperlist.com/2020/01/halloween-lockscreen-wallpaper-iphone.html "></a></td>
+            <td><a href="img/pumpkin.jpg" target="blank">
+              <img src="img/pumpkin.jpg" height="50" alt="https://www.walpaperlist.com/2020/01/halloween-lockscreen-wallpaper-iphone.html"></a></td>
+            <!--image source: https://www.walpaperlist.com/2020/01/halloween-lockscreen-wallpaper-iphone.html -->
             <td>Spiders & Snakes: Animals that Create Fear</td>
             <td>Peyton Godfrey</td>
             <td>2008</td>
@@ -108,18 +111,20 @@
             <td>$100</td>
           </tr>
           <tr>
-            <td><a href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/spells.jpg" target="blank">
-              <img src="../public/img/spells.jpg" height="50" alt="https://www.freepik.com/free-photos-vectors/witchcraft "></a></td>
+            <td><a href="img/spells.jpg" target="blank">
+              <img src="img/spells.jpg" height="50" alt="https://www.freepik.com/free-photos-vectors/witchcraft"></a></td>
+            <!--image source: https://www.freepik.com/free-photos-vectors/witchcraft -->
             <td>Advanced Dark Spells</td>
             <td>Wicked Witch of the West</td>
             <td>1950</td>
             <td>Hogwarts</td>
             <td>300</td>
-            <td>$75</td>
+            <td>$250</td>
           </tr>
           <tr>
-            <td><a href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/girlinwoods.jpg" target="blank">
-              <img src="../public/img/girlinwoods.jpg" height="50" alt="https://pixabay.com/images/search/witchcraft/"></a></td>
+            <td><a href="img/girlinwoods.jpg" target="blank">
+              <img src="img/girlinwoods.jpg" height="50" alt="https://pixabay.com/images/search/witchcraft/"></a></td>
+            <!--image source: https://pixabay.com/images/search/witchcraft/ -->
             <td>Modern Magic Arts</td>
             <td>Taylor Hein</td>
             <td>2001</td>
@@ -128,18 +133,20 @@
             <td>$200</td>
           </tr>
           <tr>
-            <td><a href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/candles.jpg" target="blank">
-              <img src="../public/img/candles.jpg" height="50" alt="https://br.pinterest.com/pin/317855686201792416/ "></a></td>
+            <td><a href="img/candles.jpg" target="blank">
+              <img src="img/candles.jpg" height="50" alt="https://br.pinterest.com/pin/317855686201792416/"></a></td>
+            <!--image source: https://br.pinterest.com/pin/317855686201792416/-->
             <td>Dark Arts Encyclopedia</td>
             <td>Severus Snape</td>
             <td>1999</td>
             <td>Hogwarts</td>
-            <td>60</td>
-            <td>$40</td>
+            <td>600</td>
+            <td>$400</td>
           </tr>
           <tr>
-            <td><a href="/Applications/2-simple-docker-js-mgodfrey8/2-simple-docker-js-mgodfrey8/app/public/img/spells2.jpg" target="blank">
-              <img src="../public/img/spells2.jpg" height="50" alt="https://www.istockphoto.com/vector/witchcraft-cute-vector-doodle-hand-drawn-seamless-pattern-gm1202904894-345530895"></a></td>
+            <td><a href="img/spells2.jpg" target="blank">
+              <img src="img/spells2.jpg" height="50" alt="https://www.istockphoto.com/vector/witchcraft-cute-vector-doodle-hand-drawn-seamless-pattern-gm1202904894-345530895"></a></td>
+            <!--image source:https://www.istockphoto.com/vector/witchcraft-cute-vector-doodle-hand-drawn-seamless-pattern-gm1202904894-345530895 -->
             <td>Ancient Spells & Potions</td>
             <td>Unknown</td>
             <td>100</td>
@@ -192,6 +199,10 @@
         <button type="submit" class="btn btn-primary" id="bbutton">Submit</button>
       </form>
     </div>
-   
+    <!--table sort plugin in: http://tristen.ca/tablesort/demo/-->
+    <script src='js/tablesort.min.js'></script>
+    <script>
+      new Tablesort(document.getElementById('witchBookTable'));
+    </script>
 </body>
 </html>
