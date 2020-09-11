@@ -1,0 +1,72 @@
+h5 {
+    color: blueviolet;
+}
+body {
+    color: blueviolet;
+    font-family: fantasy;
+    background-color: black; 
+    color: whitesmoke
+}
+
+#StudentID {
+    color: whitesmoke;
+}
+#MadisonUni {
+    color: peru;
+    font-weight: bolder;
+}
+#links  {
+    color: peru;
+}
+#sbutton {
+    background-color: peru;
+    border: peru;
+}
+#bbutton {
+    background-color: peru;
+    border: peru;
+    margin-left: 90%;
+}
+td {
+    color: peru;
+}
+th {
+    color: blueviolet;
+}
+h1, h4 {
+    color: peru;
+    text-align: center;
+}
+h3 {
+    color: blueviolet;
+}
+#email {
+    color: blueviolet;
+}
+.tabler {
+    color: blueviolet;
+
+}
+.navbar-custom {
+    background-color: #ff5500;
+}
+#BookForm {
+    color: peru;
+}
+#bookform {
+    color: black; 
+}
+.titlepg {
+    font-weight: bold;
+    text-align: center;
+}
+#titleinfo {
+    margin: 20%;
+}
+#studententernform {
+    margin-left: 1%;
+}
+
+a {
+    color: blueviolet;
+}
