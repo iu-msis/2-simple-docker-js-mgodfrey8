@@ -62,7 +62,8 @@
       </form>
       <br>
       <!--Table-->
-      <table class="table table-sm">
+      <table class="table table-sm" id="students">
+        <div class="patientCard">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Photo</th>
@@ -72,15 +73,15 @@
         </thead class="thead-dark">
           <tr>
             <td>
-              <a href="img/Witch.jpg" target="blank">
-              <img src="img/Witch.jpg" height="50" alt="https://www.pinterest.com.au/pin/178173728991275248/"></a>
-            </td>
-            <!-- Image source: https://www.pinterest.com.au/pin/178173728991275248/ -->
-            <td>
-              Sabrina Spellman 
+              <a v-bind:href="Photo" target="blank">
+                <img v-bind:src="Photo" height="30">
+              </a>
             </td>
             <td>
-              United States
+              {{ Name }} 
+            </td>
+            <td>
+              {{ Country }}
             </td>
           </tr>
         <thead class="thead-dark">
@@ -91,19 +92,21 @@
           </tr>
         </thead>
           <tr>
-            <td>
-              October 31, 1998
+            <td id="momentApp">
+              {{ (Birthday) }}
             </td>
             <td>
-              21
+              {{ Age }}
             </td>
             <td>
-              <a id="email" href="mailto:sspellman@muw.edu ">sspellman@muw.edu</a>
+              <a id="email" href="mailto:sspellman@muw.edu ">{{ Email }}</a>
             </td>
           </tr>
+        </div>
       </table>
     </div>
+    <script scr="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/index.app.js"></script>
 </body>
 </html>
