@@ -7,6 +7,8 @@ var app = new Vue({
         Birthday:'',
         Age:'',
         Email:'',
+        Email2:'',
+        Bday:'',
         stList: [],
       },
 
@@ -23,11 +25,15 @@ var app = new Vue({
           this.Photo = userData.picture.large;
           this.Name = userData.name.first + " " + userData.name.last;
           this.Country = userData.nat;
-          this.Birthday = userData.dob;
           this.Age = userData.dob.age;
-          this.Email = userData.email;
+          this.Email = 'mailto:' + userData.email;
+          // line above from http://xion.io/post/code/js-mailto-urls.html
+          this.Email2 = userData.email;
+          this.Birthday = userData.dob.date;
         }
         );
       },
+      formatDate(d) {return moment(d).format("MMM Do YY");
     }
+    },
 })
