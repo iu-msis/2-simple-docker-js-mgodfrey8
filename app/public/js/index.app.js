@@ -14,6 +14,7 @@ var app = new Vue({
 
       created() {
         this.fetchUser();
+        this.submit();
       },
     methods: {
      fetchUser: function(){
@@ -34,6 +35,10 @@ var app = new Vue({
         );
       },
       formatDate(d) {return moment(d).format("MMM Do YY");
-    }
-    },
+      },
+      submit: function(event){
+        window.location.reload();
+      }
+      // reload page method from: https://stackoverflow.com/questions/51273862/how-do-i-reload-page-on-click-of-vuetify-button 
+  },
 })
