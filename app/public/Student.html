@@ -62,7 +62,7 @@
       </form>
       <br>
       <!--Table-->
-      <table class="table table-sm" id="students">
+      <table class="table table-sm" id="students" >
         <div class="patientCard">
         <thead class="thead-dark">
           <tr>
@@ -105,7 +105,9 @@
           </tr>
         </div>
       </table>
-      <button type="submit" v-on:click="submit">Reload</button>
+      <div id="students">
+        <button type="button" v-on:submit={{reload()}}>Reload</button>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
