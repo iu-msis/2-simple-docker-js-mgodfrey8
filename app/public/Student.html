@@ -62,8 +62,8 @@
       </form>
       <br>
       <!--Table-->
-      <table class="table table-sm" id="students" >
-        <div class="patientCard">
+      <table class="table table-sm" id="students">
+        <div>
         <thead class="thead-dark">
           <tr>
             <th scope="col">Photo</th>
@@ -100,13 +100,12 @@
             </td>
             <td>
               <a id="email" v-bind:href="Email">{{ Email2 }}</a>
-              
             </td>
           </tr>
         </div>
       </table>
       <div id="students">
-        <button type="button" v-on:submit={{reload()}}>Reload</button>
+        <button type="button" v-on:submit="reload()">Reload</button>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
