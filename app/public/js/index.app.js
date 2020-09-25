@@ -10,12 +10,10 @@ var app = new Vue({
         Email2:'',
         Bday:'',
         stList: [],
-        //componentKey: 0,
       },
 
       created() {
         this.fetchUser();
-        this.reload();
       },
     methods: {
      fetchUser: function(){
@@ -37,10 +35,6 @@ var app = new Vue({
       },
       formatDate(d) {return moment(d).format("MMM Do YY");
       },
-      reload() {
-        this.fetchUser();
-      }
-      
     },
 })
 

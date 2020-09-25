@@ -50,18 +50,18 @@
       <!--selection-->
       <br>
       <h3>Search for student</h3>
-      <form class="form-inline" id="BookForm">
+      <form>
         <div class="form-group row" id="studententernform">
           <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label">Student ID:</label>
           <div class="col-sm-10">
             <input type="text" class="form-control form-control" id="bookform" placeholder="Enter Text Here">
           </div>
         </div>
-        
-        <button type="submit" class="btn btn-primary mb-2" id="sbutton">Search</button>
+        <button type="button" id="sbutton">Search</button>
       </form>
       <br>
       <!--Table-->
+      <form v-on:submit.prevent="fetchUser">
       <table class="table table-sm" id="students">
         <div>
         <thead class="thead-dark">
@@ -104,9 +104,8 @@
           </tr>
         </div>
       </table>
-      <div id="students">
-        <button type="button" v-on:submit="reload()">Reload</button>
-      </div>
+      <button id="sbutton">Reload</button>
+    </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
