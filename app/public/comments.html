@@ -25,7 +25,7 @@
     <!--Navabr-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="img/witchhat.png" target="blank">
-          <img src="img/witchhat.png" height="30" alt="https://www.pngitem.com/middle/hbhTTmb_witch-hat-clipart-hd-png-download/">
+          <img src="img/witchhat.png" height="30" alt="">
         </a>
         <!-- Image source: https://www.pngitem.com/middle/hbhTTmb_witch-hat-clipart-hd-png-download/ -->
         <a class="navbar-brand" href="index.html" id="MadisonUni">Madison University for Witches</a>
@@ -49,15 +49,42 @@
           </ul>
         </div>
       </nav>
-     <!-- word art -->
-     <br>
-     <br>
-     <br>
-     <h1 class="titlepg">Welcome to Madison University for Witches!</h1>
-     <h3 class="titlepg">The leader in witch craft & dark arts.</h3>
-     <br>
-     <h4 id="titleinfo">Welcome to the Studnet Portal! Find your personal informtion under the Students and the list of books you need for the semester under Books.</h4>
+      <!--selection-->
+      <br>
+      <h3>Student Reviews</h3>
+      <form id="newCommentForm">
+        <div class="form-group row">
+          <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label">New Review:</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control form-control" id="commentText" placeholder="Enter Text Here">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2"  id="submitNewComment">Search</button>
+      </form>
+      <br>
+      <!--Table-->
+      <form v-on:submit.prevent="fetchUser">
+      <table class="table table-sm" id="commentTable">
+        <div>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Reviews</th>
+          </tr>
+        </thead>
+        <tbody id="commentTableBody">
+          <tr>
+            <td>
+              {{ commentText }} 
+            </td>
+          </tr>
+        </tbody>
+        </div>
+      </table>
+      <!-- <button id="sbutton">Reload</button> -->
+    </form>
     </div>
-   
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
+    <script src="js/index.app.js"></script>
 </body>
 </html>
