@@ -1,4 +1,4 @@
-MYSQL_DATABASE=madgodfr
+MYSQL_DATABASE=madgodfr-test
 MYSQL_HOST=madgodfr-test.cczre5ey3uhn.us-east-1.rds.amazonaws.com
 MYSQL_USER=madgodfradmin
 MYSQL_PASSWORD=Hoosiers175

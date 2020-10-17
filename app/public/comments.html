@@ -69,11 +69,15 @@
           <div>
           <thead class="thead-dark">
             <tr>
+              <th scope="col">ID</th>
               <th scope="col">Reviews</th>
             </tr>
           </thead>
           <tbody v-for="comment in cList" id="commentTableBody">
             <tr>
+                <td>
+                  {{ comment.id }} 
+                </td>
               <td>
                 {{ comment.commentText }} 
               </td>
@@ -87,6 +91,6 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
-    <script src="js/index.app.js"></script>
+    <script src="js/details.app.js"></script>
 </body>
 </html>
