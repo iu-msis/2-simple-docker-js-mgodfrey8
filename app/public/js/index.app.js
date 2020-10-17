@@ -12,7 +12,7 @@ var app = new Vue({
         stList: [],
       },
 
-      created() {
+    created() {
         this.fetchUser();
       },
     methods: {
@@ -34,7 +34,7 @@ var app = new Vue({
         );
       },
       formatDate(d) {return moment(d).format("MMM Do YY");
-      },
-    },
+      }
+    }
 })
 

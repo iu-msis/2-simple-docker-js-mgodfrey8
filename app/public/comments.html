@@ -63,25 +63,27 @@
       </form>
       <br>
       <!--Table-->
-      <form v-on:submit.prevent="fetchUser">
-      <table class="table table-sm" id="commentTable">
-        <div>
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Reviews</th>
-          </tr>
-        </thead>
-        <tbody id="commentTableBody">
-          <tr>
-            <td>
-              {{ commentText }} 
-            </td>
-          </tr>
-        </tbody>
-        </div>
-      </table>
+      <!-- <form v-on:submit.prevent="fetchUser"> -->
+      <div class="row" id="students">
+        <table class="table table-sm" id="commentTable">
+          <div>
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Reviews</th>
+            </tr>
+          </thead>
+          <tbody v-for="comment in cList" id="commentTableBody">
+            <tr>
+              <td>
+                {{ comment.commentText }} 
+              </td>
+            </tr>
+          </tbody>
+          </div>
+        </table>
+      </div>
       <!-- <button id="sbutton">Reload</button> -->
-    </form>
+    <!-- </form> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
