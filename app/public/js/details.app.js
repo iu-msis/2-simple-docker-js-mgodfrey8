@@ -1,31 +1,28 @@
 var app = new Vue({
-    el: '#students',
+    el: '#comments',
     data: {
-        comments:[{
-          commentText:'',
-          id:''
-        }],
         cList: [],
+        //uList:[],
         newCommentForm: {},
-        newUserForm: {}
+        //newUserForm: {}
       },
 
-    // created() {
+    created() {
         
-    //     fetch("api/randomUser/")
-    //     .then( response => response.json() )
-    //     .then( json => {
-    //       this.uList = json;
+        fetch("api/comments/")
+        .then( response => response.json() )
+        .then( json => {
+          this.uList = json;
 
-    //       console.log(json)}
-    //     );
+          console.log(json)}
+        );
 
-    //     this.newCommentForm = this.newCommentData();
-    //     this.newUserForm = this.newCommentData();
-    //   },
+        this.newCommentForm = this.newCommentData();
+        this.newUserForm = this.newCommentData();
+      },
     methods: {
       fetchComment(){
-        fetch("api/comments/")
+        fetch("api/comments/create.php")
         .then( response => response.json() )
         .then( json => {
           this.cList = json;
@@ -39,56 +36,56 @@ var app = new Vue({
       //     lastName: ""
       //   }
       // },
-      // newCommentData() {
-      //   return {
-      //     commentText: "",
-      //   }
-      // },
-      // handleNewCommentForm( evt ) {
-      //   // evt.preventDefault();  // Redundant w/ Vue's submit.prevent
+      newCommentData() {
+        return {
+          commentText: "",
+        }
+      },
+      handleNewCommentForm( evt ) {
+        // evt.preventDefault();  // Redundant w/ Vue's submit.prevent
   
-      //   // TODO: Validate the data!
+        // TODO: Validate the data!
   
-      //   fetch('api/comments/post.php', {
-      //     method:'POST',
-      //     body: JSON.stringify(this.newCommentForm),
-      //     headers: {
-      //       "Content-Type": "application/json; charset=utf-8"
-      //     }
-      //   })
-      //   .then( response => response.json() )
-      //   .then( json => {
-      //     console.log("Returned from post:", json);
-      //     // TODO: test a result was returned!
-      //     this.ptList.push(json[0]);
-      //     this.newPtForm = this.newCommentData();
-      //   });
+        fetch('api/comments/post.php', {
+          method:'POST',
+          body: JSON.stringify(this.newCommentForm),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        })
+        .then( response => response.json() )
+        .then( json => {
+          console.log("Returned from post:", json);
+          // TODO: test a result was returned!
+          this.ptList.push(json[0]);
+          this.newPtForm = this.newCommentData();
+        });
   
-      //   console.log("Creating (POSTing)...!");
-      //   console.log(this.newCommentForm);
-      // },
-      // handleNewUserForm( evt ) {
-      //   // evt.preventDefault();  // Redundant w/ Vue's submit.prevent
+        console.log("Creating (POSTing)...!");
+        console.log(this.newCommentForm);
+      },
+    //   handleNewUserForm( evt ) {
+    //     // evt.preventDefault();  // Redundant w/ Vue's submit.prevent
   
-      //   // TODO: Validate the data!
+    //     // TODO: Validate the data!
   
-      //   fetch('api/randomUser/post.php', {
-      //     method:'POST',
-      //     body: JSON.stringify(this.newUserForm),
-      //     headers: {
-      //       "Content-Type": "application/json; charset=utf-8"
-      //     }
-      //   })
-      //   .then( response => response.json() )
-      //   .then( json => {
-      //     console.log("Returned from post:", json);
-      //     // TODO: test a result was returned!
-      //     this.ptList.push(json[0]);
-      //     this.newPtForm = this.newUserData();
-      //   });
+    //     fetch('api/randomUser/post.php', {
+    //       method:'POST',
+    //       body: JSON.stringify(this.newUserForm),
+    //       headers: {
+    //         "Content-Type": "application/json; charset=utf-8"
+    //       }
+    //     })
+    //     .then( response => response.json() )
+    //     .then( json => {
+    //       console.log("Returned from post:", json);
+    //       // TODO: test a result was returned!
+    //       this.ptList.push(json[0]);
+    //       this.newPtForm = this.newUserData();
+    //     });
   
-      //   console.log("Creating (POSTing)...!");
-      //   console.log(this.newUserForm);
-      // }
-    }
+    //     console.log("Creating (POSTing)...!");
+    //     console.log(this.newUserForm);
+    //   }
+     }
 })

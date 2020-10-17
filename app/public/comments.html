@@ -64,9 +64,8 @@
       <br>
       <!--Table-->
       <!-- <form v-on:submit.prevent="fetchUser"> -->
-      <div class="row" id="students">
+      <div class="row" id="comments">
         <table class="table table-sm" id="commentTable">
-          <div>
           <thead class="thead-dark">
             <tr>
               <th scope="col">ID</th>
@@ -78,12 +77,11 @@
                 <td>
                   {{ comment.id }} 
                 </td>
-              <td>
-                {{ comment.commentText }} 
-              </td>
+                <td>
+                  {{ comment.commentText }} 
+                </td>
             </tr>
           </tbody>
-          </div>
         </table>
       </div>
       <!-- <button id="sbutton">Reload</button> -->
