@@ -72,8 +72,8 @@
               <th scope="col">Reviews</th>
             </tr>
           </thead>
-          <tbody v-for="comment in cList" id="commentTableBody">
-            <tr>
+          <tbody  id="commentTableBody">
+            <tr v-for="comment in cList">
                 <td>
                   {{ comment.id }} 
                 </td>

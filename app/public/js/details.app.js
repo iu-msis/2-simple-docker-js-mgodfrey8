@@ -18,7 +18,7 @@ var app = new Vue({
         );
 
         this.newCommentForm = this.newCommentData();
-        this.newUserForm = this.newCommentData();
+        //this.newUserForm = this.newCommentData();
       },
     methods: {
       fetchComment(){
