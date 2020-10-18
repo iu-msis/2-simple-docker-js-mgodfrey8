@@ -53,16 +53,15 @@ var app = new Vue({
         .then( json => {
           console.log("Returned from post:", json);
           // TODO: test a result was returned!
-          this.comments.push(json[0]);
+          this.comments =json;
           this.newComment = this.newCommentData();
         });
-        
         console.log("Creating (POSTing)...!");
         console.log(this.newComment);
       },
       newCommentData() {
         return {
-          commentText: "",
+          commentText: ""
         }
       }
     //   handleNewUserForm( evt ) {

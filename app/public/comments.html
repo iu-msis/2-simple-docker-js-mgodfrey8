@@ -56,9 +56,9 @@
         <form id="newCommentForm" v-on:submit.prevent="createComment()">
           <div class="form-group row">
             <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label">New Review:</label>
-            <div class="col-sm-10">
+            <!-- <div class="col-sm-10"> -->
               <input type="text" v-model="newComment.commentText"class="form-control" id="commentText" placeholder="Enter Text Here">
-            </div>
+            <!-- </div> -->
           </div>
           <button type="submit" value="createComment" class="btn btn-primary mb-2"  id="submitNewComment">Add Review</button>
         </form>
@@ -87,7 +87,6 @@
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
     <script src="js/details.app.js"></script>
 </body>
 </html>
