@@ -6,12 +6,14 @@ var app = new Vue({
           commentText:''
         }],
         //uList:[],
-        //newCommentForm: {},
+        newComment: {
+          commentText:''
+        },
         //newUserForm: {}
       },
 
-    // created() {
-        
+    created() {
+        this.fetchComment();
     //     fetch("api/comments/")
     //     .then( response => response.json() )
     //     .then( json => {
@@ -22,7 +24,7 @@ var app = new Vue({
 
     //     this.newCommentForm = this.newCommentData();
     //     //this.newUserForm = this.newCommentData();
-    //   },
+      },
     methods: {
       fetchComment(){
         fetch("api/comments/")
@@ -38,34 +40,31 @@ var app = new Vue({
       //     lastName: ""
       //   }
       // },
-      // newCommentData() {
-      //   return {
-      //     commentText: "",
-      //   }
-      // },
-      // handleNewCommentForm( evt ) {
-      //   // evt.preventDefault();  // Redundant w/ Vue's submit.prevent
-  
-      //   // TODO: Validate the data!
-  
-      //   fetch('api/comments/post.php', {
-      //     method:'POST',
-      //     body: JSON.stringify(this.newCommentForm),
-      //     headers: {
-      //       "Content-Type": "application/json; charset=utf-8"
-      //     }
-      //   })
-      //   .then( response => response.json() )
-      //   .then( json => {
-      //     console.log("Returned from post:", json);
-      //     // TODO: test a result was returned!
-      //     this.ptList.push(json[0]);
-      //     this.newPtForm = this.newCommentData();
-      //   });
-  
-      //   console.log("Creating (POSTing)...!");
-      //   console.log(this.newCommentForm);
-      // },
+    
+      createComment() {
+        fetch('api/comments/create.php', {
+          method:'POST',
+          body: JSON.stringify(this.newComment),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        })
+        .then( response => response.json() )
+        .then( json => {
+          console.log("Returned from post:", json);
+          // TODO: test a result was returned!
+          this.comments.push(json[0]);
+          this.newComment = this.newCommentData();
+        });
+        
+        console.log("Creating (POSTing)...!");
+        console.log(this.newComment);
+      },
+      newCommentData() {
+        return {
+          commentText: "",
+        }
+      }
     //   handleNewUserForm( evt ) {
     //     // evt.preventDefault();  // Redundant w/ Vue's submit.prevent
   
