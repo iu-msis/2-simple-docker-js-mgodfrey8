@@ -63,8 +63,8 @@
       </form>
       <br>
       <!--Table-->
-      <!-- <form v-on:submit.prevent="fetchUser"> -->
-      <div class="row" id="comments">
+      
+      <div id="comments">
         <table class="table table-sm" id="commentTable">
           <thead class="thead-dark">
             <tr>
@@ -73,19 +73,19 @@
             </tr>
           </thead>
           <tbody id="commentTableBody">
-            <tr v-for="comment in comments" >
+            <tr v-for="c in comments" class="comments">
                 <td>
-                  {{ comment.id }} 
+                  {{ c.id }} 
                 </td>
                 <td>
-                  {{ comment.commentText }} 
+                  {{ c.commentText }} 
                 </td>
             </tr>
           </tbody>
         </table>
       </div>
       <!-- <button id="sbutton">Reload</button> -->
-    <!-- </form> -->
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"></script>
