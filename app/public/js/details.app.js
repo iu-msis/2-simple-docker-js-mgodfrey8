@@ -49,6 +49,7 @@ var app = new Vue({
             "Content-Type": "application/json; charset=utf-8"
           }
         })
+        // recieved soem help from Adnan 
         .then( response => response.json() )
         .then( json => {
           console.log("Returned from post:", json);
